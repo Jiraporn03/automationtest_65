@@ -1,51 +1,125 @@
 import { test, expect } from '@playwright/test';
 
-test('test', async ({ page }) => {
-  await page.goto('https://computer.surin.rmuti.ac.th/sc/');
-  await page.getByRole('link', { name: 'pro/' }).click();
-  await page.getByRole('textbox', { name: 'ชื่อผู้ใช้งาน' }).click();
-  await page.getByRole('textbox', { name: 'ชื่อผู้ใช้งาน' }).fill('anyawee_chai@hotmail.com');
-  await page.getByRole('textbox', { name: 'รหัสผ่าน' }).click();
-  await page.getByRole('textbox', { name: 'รหัสผ่าน' }).fill('anyawee05');
-  await page.getByRole('button', { name: 'เข้าสู่ระบบ' }).click();
-  await page.getByRole('link', { name: '➕ เพิ่มกลุ่มวิชา' }).click();
-  await page.getByRole('textbox', { name: ' ชื่อกลุ่มวิชาภาษาไทย' }).click();
-  await page.getByRole('textbox', { name: ' ชื่อกลุ่มวิชาภาษาไทย' }).fill('คิดเลข');
-  await page.getByRole('textbox', { name: ' ชื่อกลุ่มวิชาภาษาอังกฤษ' }).click();
-  await page.getByRole('textbox', { name: ' ชื่อกลุ่มวิชาภาษาอังกฤษ' }).fill('kid lak');
-  await page.locator('#g1').click();
-  await page.locator('#g1').fill('0');
-  await page.locator('#g2').fill('');
-  await page.locator('#g1').fill('2');
-  await page.locator('#g2').fill('0');
-  await page.locator('#g3').fill('0');
-  await page.locator('#g4').fill('0');
-  await page.locator('#g5').fill('1');
-  await page.locator('#g6').fill('0');
-  await page.locator('#g7').fill('0');
-  await page.locator('#g8').fill('2');
-  await page.getByRole('spinbutton', { name: ' ทฤษฎี' }).click();
-  await page.getByRole('spinbutton', { name: ' ทฤษฎี' }).fill('6');
-  await page.getByRole('spinbutton', { name: ' ปฏิบัติ' }).click();
-  await page.getByRole('spinbutton', { name: ' ปฏิบัติ' }).fill('3');
-  await page.getByRole('spinbutton', { name: ' ชั่วโมงทฤษฎี' }).click();
-  await page.getByRole('spinbutton', { name: ' ชั่วโมงทฤษฎี' }).fill('60');
-  await page.getByRole('spinbutton', { name: ' ชั่วโมงปฏิบัติ' }).click();
-  await page.getByRole('spinbutton', { name: ' ชั่วโมงปฏิบัติ' }).fill('60');
-  await page.getByRole('textbox', { name: ' วันที่เปิดรับสมัครนักเรียน' }).fill('2025-10-17');
-  await page.getByRole('textbox', { name: ' วันที่ปิดรับสมัครนักเรียน' }).fill('2025-10-20');
-  await page.getByRole('spinbutton', { name: ' จำนวนนักเรียน' }).click();
-  await page.getByRole('spinbutton', { name: ' จำนวนนักเรียน' }).fill('40');
-  await page.getByRole('spinbutton', { name: ' ราคา (บาท)' }).click();
-  await page.getByRole('spinbutton', { name: ' ราคา (บาท)' }).fill('4000');
-  await page.getByRole('textbox', { name: ' รายละเอียดของกลุ่มวิชา' }).click();
-  await page.getByRole('textbox', { name: ' รายละเอียดของกลุ่มวิชา' }).fill('ช่วยฝนการคิดเลขและการคิดคำนวณในสูตรต่างๆ');
-  await page.getByLabel('ผู้สอน(เจ้าของกลุ่มวิชา)').selectOption('23');
-  await page.locator('select[name="course_id[]"]').selectOption('99');
-  page.once('dialog', dialog => {
-    console.log(`Dialog message: ${dialog.message()}`);
-    dialog.dismiss().catch(() => {});
-  });
-  await page.getByRole('button', { name: ' บันทึกข้อมูล' }).click();
-  await expect(page.getByRole('cell', { name: 'คิดเลข' }).locator('span')).toBeVisible();
+test('test00022', async ({ page }) => {
+  await page.goto('https://computer.surin.rmuti.ac.th/sc/fornend/');
+  await page.getByRole('link', { name: 'สมัครสมาชิก' }).click();
+  await page.getByRole('textbox', { name: 'ชื่อ', exact: true }).click();
+  await page.getByRole('textbox', { name: 'ชื่อ', exact: true }).fill('ศักดิ์ชัย');
+  await page.getByRole('textbox', { name: 'นามสกุล' }).click();
+  await page.getByRole('textbox', { name: 'นามสกุล' }).fill('โอษฐงามมมม');
+  await page.getByRole('textbox', { name: 'ชื่อผู้ใช้' }).click();
+  await page.getByRole('textbox', { name: 'ชื่อผู้ใช้' }).fill('duke007x');
+  await page.getByRole('textbox', { name: 'รหัสผ่าน', exact: true }).click();
+  await page.getByRole('textbox', { name: 'รหัสผ่าน', exact: true }).fill('a123123123');
+  await page.getByRole('textbox', { name: 'ยืนยันรหัสผ่าน' }).click();
+  await page.getByRole('textbox', { name: 'ยืนยันรหัสผ่าน' }).fill('a123123123');
+  await page.getByRole('textbox', { name: 'เบอร์โทรศัพท์' }).click();
+  await page.getByRole('textbox', { name: 'เบอร์โทรศัพท์' }).fill('0987654321');
+  await page.getByRole('textbox', { name: 'อีเมล' }).click();
+  await page.getByRole('textbox', { name: 'อีเมล' }).fill('abcde@gmail.com');
+  await page.getByRole('button', { name: ' สมัครสมาชิก' }).click();
+  await expect(page.getByRole('heading', { name: ' วิธีการใช้งาน' })).toBeVisible();
+  await page.screenshot({path:"test-results/screenshot1.png",fullPage:true});
+});
+
+
+test('test00023', async ({ page }) => {
+  await page.goto('https://computer.surin.rmuti.ac.th/sc/fornend/');
+  await page.getByRole('link', { name: 'สมัครสมาชิก' }).click();
+  await page.getByRole('textbox', { name: 'ชื่อ', exact: true }).click();
+  await page.getByRole('button', { name: ' สมัครสมาชิก' }).click();
+  await page.screenshot({path:"test-results/screenshot2.png",fullPage:true});
+});
+
+
+test('test00024', async ({ page }) => {
+  await page.goto('https://computer.surin.rmuti.ac.th/sc/fornend/');
+  await page.getByRole('link', { name: 'สมัครสมาชิก' }).click();
+  await page.getByRole('textbox', { name: 'ชื่อ', exact: true }).click();
+  await page.getByRole('textbox', { name: 'ชื่อ', exact: true }).fill('ศักดิ์ชัย');
+  await page.getByRole('textbox', { name: 'นามสกุล' }).click();
+  await page.getByRole('button', { name: ' สมัครสมาชิก' }).click();
+  await page.screenshot({path:"test-results/screenshot3.png",fullPage:true});
+});
+
+
+test('test00025', async ({ page }) => {
+  await page.goto('https://computer.surin.rmuti.ac.th/sc/fornend/');
+  await page.getByRole('link', { name: 'สมัครสมาชิก' }).click();
+  await page.getByRole('textbox', { name: 'ชื่อ', exact: true }).click();
+  await page.getByRole('textbox', { name: 'ชื่อ', exact: true }).fill('ศักดิ์ชัย');
+  await page.getByRole('textbox', { name: 'นามสกุล' }).click();
+  await page.getByRole('textbox', { name: 'นามสกุล' }).fill('โอษฐงาม');
+  await page.getByRole('textbox', { name: 'ชื่อผู้ใช้' }).click();
+  await page.getByRole('button', { name: ' สมัครสมาชิก' }).click();
+  await page.screenshot({path:"test-results/screenshot4.png",fullPage:true});
+});
+
+
+test('test00026', async ({ page }) => {
+  await page.goto('https://computer.surin.rmuti.ac.th/sc/fornend/');
+  await page.getByRole('link', { name: 'สมัครสมาชิก' }).click();
+  await page.getByRole('textbox', { name: 'ชื่อ', exact: true }).click();
+  await page.getByRole('textbox', { name: 'ชื่อ', exact: true }).fill('ศักดิ์ชัย');
+  await page.getByRole('textbox', { name: 'นามสกุล' }).click();
+  await page.getByRole('textbox', { name: 'นามสกุล' }).fill('โอษฐงาม');
+  await page.getByRole('textbox', { name: 'ชื่อผู้ใช้' }).click();
+  await page.getByRole('textbox', { name: 'ชื่อผู้ใช้' }).fill('duke00777');
+  await page.getByRole('textbox', { name: 'รหัสผ่าน', exact: true }).click();
+  await page.getByRole('button', { name: ' สมัครสมาชิก' }).click();
+  await page.screenshot({path:"test-results/screenshot5.png",fullPage:true});
+});
+
+
+test('test00027', async ({ page }) => {
+  await page.goto('https://computer.surin.rmuti.ac.th/sc/fornend/');
+  await page.getByRole('link', { name: 'สมัครสมาชิก' }).click();
+  await page.getByRole('textbox', { name: 'ชื่อ', exact: true }).click();
+  await page.getByRole('textbox', { name: 'ชื่อ', exact: true }).fill('ศักดิ์ชัย');
+  await page.getByRole('textbox', { name: 'นามสกุล' }).click();
+  await page.getByRole('textbox', { name: 'นามสกุล' }).fill('โอษฐงาม');
+  await page.getByRole('textbox', { name: 'ชื่อผู้ใช้' }).click();
+  await page.getByRole('textbox', { name: 'ชื่อผู้ใช้' }).fill('duke000777');
+  await page.getByRole('textbox', { name: 'รหัสผ่าน', exact: true }).click();
+  await page.getByRole('textbox', { name: 'รหัสผ่าน', exact: true }).fill('a123456');
+  await page.getByRole('button', { name: ' สมัครสมาชิก' }).click();
+  await page.screenshot({path:"test-results/screenshot6.png",fullPage:true});
+});
+
+
+test('test00028', async ({ page }) => {
+  await page.goto('https://computer.surin.rmuti.ac.th/sc/fornend/');
+  await page.getByRole('link', { name: 'สมัครสมาชิก' }).click();
+  await page.getByRole('textbox', { name: 'ชื่อ', exact: true }).click();
+  await page.getByRole('textbox', { name: 'ชื่อ', exact: true }).fill('ศักดิ์ชัย');
+  await page.getByRole('textbox', { name: 'นามสกุล' }).click();
+  await page.getByRole('textbox', { name: 'นามสกุล' }).fill('โอษฐงาม');
+  await page.getByRole('textbox', { name: 'ชื่อผู้ใช้' }).click();
+  await page.getByRole('textbox', { name: 'ชื่อผู้ใช้' }).fill('duke000777');
+  await page.getByRole('textbox', { name: 'รหัสผ่าน', exact: true }).click();
+  await page.getByRole('textbox', { name: 'รหัสผ่าน', exact: true }).fill('a123456');
+  await page.getByRole('textbox', { name: 'ยืนยันรหัสผ่าน' }).click();
+  await page.getByRole('textbox', { name: 'ยืนยันรหัสผ่าน' }).fill('a123456');
+  await page.getByRole('button', { name: ' สมัครสมาชิก' }).click();
+  await page.screenshot({path:"test-results/screenshot7.png",fullPage:true});
+});
+
+
+test('test00029', async ({ page }) => {
+  await page.goto('https://computer.surin.rmuti.ac.th/sc/fornend/');
+  await page.getByRole('link', { name: 'สมัครสมาชิก' }).click();
+  await page.getByRole('textbox', { name: 'ชื่อ', exact: true }).click();
+  await page.getByRole('textbox', { name: 'ชื่อ', exact: true }).fill('ศักดิ์ชัย');
+  await page.getByRole('textbox', { name: 'นามสกุล' }).click();
+  await page.getByRole('textbox', { name: 'นามสกุล' }).fill('โอษฐงาม');
+  await page.getByRole('textbox', { name: 'ชื่อผู้ใช้' }).click();
+  await page.getByRole('textbox', { name: 'ชื่อผู้ใช้' }).fill('duke000777');
+  await page.getByRole('textbox', { name: 'รหัสผ่าน', exact: true }).click();
+  await page.getByRole('textbox', { name: 'รหัสผ่าน', exact: true }).fill('a123456');
+  await page.getByRole('textbox', { name: 'ยืนยันรหัสผ่าน' }).click();
+  await page.getByRole('textbox', { name: 'ยืนยันรหัสผ่าน' }).fill('a123456');
+  await page.getByRole('textbox', { name: 'เบอร์โทรศัพท์' }).click();
+  await page.getByRole('textbox', { name: 'เบอร์โทรศัพท์' }).fill('0987654321');
+  await page.getByRole('button', { name: ' สมัครสมาชิก' }).click();
+  await page.screenshot({path:"test-results/screenshot8.png",fullPage:true});
 });
