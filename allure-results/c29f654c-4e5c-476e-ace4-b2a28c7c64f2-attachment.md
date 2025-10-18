@@ -1,0 +1,400 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]: 👋 ยินดีต้อนรับ
+    - link "admin" [ref=e5] [cursor=pointer]:
+      - /url: "#"
+      - strong [ref=e6] [cursor=pointer]: admin
+  - generic [ref=e8]:
+    - navigation [ref=e9]:
+      - heading "เมนู" [level=4] [ref=e10]
+      - link "🏠 หน้าหลัก" [ref=e11] [cursor=pointer]:
+        - /url: ../admin/blackendhome.php
+      - link "✏️เพิ่มบุคลากร" [ref=e12] [cursor=pointer]:
+        - /url: ../user/personnel_list.php
+      - link "🌿 แก้ไขสาขา" [ref=e13] [cursor=pointer]:
+        - /url: ../admin/branch-manage.php
+      - separator [ref=e14]
+      - link "➕ เพิ่มกลุ่มวิชา" [ref=e15] [cursor=pointer]:
+        - /url: ../admin/add-module.php
+      - link "📘 เพิ่มรายวิชา" [ref=e16] [cursor=pointer]:
+        - /url: ../admin/add-subject.php
+      - separator [ref=e17]
+      - link "👨‍🎓 ตรวจสอบการลงทะเบียน" [ref=e18] [cursor=pointer]:
+        - /url: ../admin/check-registration.php
+      - link "📚 ดูคอร์สเรียน" [ref=e19] [cursor=pointer]:
+        - /url: ../admin/view-courses.php
+      - link "📊 ผลการเรียน" [ref=e20] [cursor=pointer]:
+        - /url: ../admin/results.php
+      - link "📊 รายงานผลการเงิน" [ref=e21] [cursor=pointer]:
+        - /url: ../admin/finance-report.php
+      - link "🔑 ตั้งรหัสผ่านใหม่" [ref=e22] [cursor=pointer]:
+        - /url: ../auth/reset-password.php
+    - main [ref=e23]:
+      - generic [ref=e24]:
+        - heading "จัดการสาขา" [level=2] [ref=e25]
+        - link " เพิ่มสาขา" [ref=e26] [cursor=pointer]:
+          - /url: branch-add.php
+          - generic [ref=e27] [cursor=pointer]: 
+          - text: เพิ่มสาขา
+      - table [ref=e29]:
+        - rowgroup [ref=e30]:
+          - row "ชื่อสาขา การจัดการ" [ref=e31]:
+            - cell "ชื่อสาขา" [ref=e32]
+            - cell "การจัดการ" [ref=e33]
+        - rowgroup [ref=e34]:
+          - row "เมคคา  แก้ไข  ลบ" [ref=e35]:
+            - cell "เมคคา" [ref=e36]
+            - cell " แก้ไข  ลบ" [ref=e37]:
+              - link " แก้ไข" [ref=e38] [cursor=pointer]:
+                - /url: edit-branch.php?id=51
+                - generic [ref=e39] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e40] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=51
+                - generic [ref=e41] [cursor=pointer]: 
+                - text: ลบ
+          - row "เมคคา  แก้ไข  ลบ" [ref=e42]:
+            - cell "เมคคา" [ref=e43]
+            - cell " แก้ไข  ลบ" [ref=e44]:
+              - link " แก้ไข" [ref=e45] [cursor=pointer]:
+                - /url: edit-branch.php?id=50
+                - generic [ref=e46] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e47] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=50
+                - generic [ref=e48] [cursor=pointer]: 
+                - text: ลบ
+          - row "เมคคา  แก้ไข  ลบ" [ref=e49]:
+            - cell "เมคคา" [ref=e50]
+            - cell " แก้ไข  ลบ" [ref=e51]:
+              - link " แก้ไข" [ref=e52] [cursor=pointer]:
+                - /url: edit-branch.php?id=49
+                - generic [ref=e53] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e54] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=49
+                - generic [ref=e55] [cursor=pointer]: 
+                - text: ลบ
+          - row "เมคคา  แก้ไข  ลบ" [ref=e56]:
+            - cell "เมคคา" [ref=e57]
+            - cell " แก้ไข  ลบ" [ref=e58]:
+              - link " แก้ไข" [ref=e59] [cursor=pointer]:
+                - /url: edit-branch.php?id=48
+                - generic [ref=e60] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e61] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=48
+                - generic [ref=e62] [cursor=pointer]: 
+                - text: ลบ
+          - row "เมคคา  แก้ไข  ลบ" [ref=e63]:
+            - cell "เมคคา" [ref=e64]
+            - cell " แก้ไข  ลบ" [ref=e65]:
+              - link " แก้ไข" [ref=e66] [cursor=pointer]:
+                - /url: edit-branch.php?id=47
+                - generic [ref=e67] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e68] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=47
+                - generic [ref=e69] [cursor=pointer]: 
+                - text: ลบ
+          - row "เมคคา  แก้ไข  ลบ" [ref=e70]:
+            - cell "เมคคา" [ref=e71]
+            - cell " แก้ไข  ลบ" [ref=e72]:
+              - link " แก้ไข" [ref=e73] [cursor=pointer]:
+                - /url: edit-branch.php?id=46
+                - generic [ref=e74] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e75] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=46
+                - generic [ref=e76] [cursor=pointer]: 
+                - text: ลบ
+          - row "เมคคา  แก้ไข  ลบ" [ref=e77]:
+            - cell "เมคคา" [ref=e78]
+            - cell " แก้ไข  ลบ" [ref=e79]:
+              - link " แก้ไข" [ref=e80] [cursor=pointer]:
+                - /url: edit-branch.php?id=45
+                - generic [ref=e81] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e82] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=45
+                - generic [ref=e83] [cursor=pointer]: 
+                - text: ลบ
+          - row "เมคคา  แก้ไข  ลบ" [ref=e84]:
+            - cell "เมคคา" [ref=e85]
+            - cell " แก้ไข  ลบ" [ref=e86]:
+              - link " แก้ไข" [ref=e87] [cursor=pointer]:
+                - /url: edit-branch.php?id=44
+                - generic [ref=e88] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e89] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=44
+                - generic [ref=e90] [cursor=pointer]: 
+                - text: ลบ
+          - row "เมคคา  แก้ไข  ลบ" [ref=e91]:
+            - cell "เมคคา" [ref=e92]
+            - cell " แก้ไข  ลบ" [ref=e93]:
+              - link " แก้ไข" [ref=e94] [cursor=pointer]:
+                - /url: edit-branch.php?id=43
+                - generic [ref=e95] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e96] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=43
+                - generic [ref=e97] [cursor=pointer]: 
+                - text: ลบ
+          - row "เมคคา  แก้ไข  ลบ" [ref=e98]:
+            - cell "เมคคา" [ref=e99]
+            - cell " แก้ไข  ลบ" [ref=e100]:
+              - link " แก้ไข" [ref=e101] [cursor=pointer]:
+                - /url: edit-branch.php?id=42
+                - generic [ref=e102] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e103] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=42
+                - generic [ref=e104] [cursor=pointer]: 
+                - text: ลบ
+          - row "เมคคา  แก้ไข  ลบ" [ref=e105]:
+            - cell "เมคคา" [ref=e106]
+            - cell " แก้ไข  ลบ" [ref=e107]:
+              - link " แก้ไข" [ref=e108] [cursor=pointer]:
+                - /url: edit-branch.php?id=41
+                - generic [ref=e109] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e110] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=41
+                - generic [ref=e111] [cursor=pointer]: 
+                - text: ลบ
+          - row "เมคคา  แก้ไข  ลบ" [ref=e112]:
+            - cell "เมคคา" [ref=e113]
+            - cell " แก้ไข  ลบ" [ref=e114]:
+              - link " แก้ไข" [ref=e115] [cursor=pointer]:
+                - /url: edit-branch.php?id=40
+                - generic [ref=e116] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e117] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=40
+                - generic [ref=e118] [cursor=pointer]: 
+                - text: ลบ
+          - row "เมคคา  แก้ไข  ลบ" [ref=e119]:
+            - cell "เมคคา" [ref=e120]
+            - cell " แก้ไข  ลบ" [ref=e121]:
+              - link " แก้ไข" [ref=e122] [cursor=pointer]:
+                - /url: edit-branch.php?id=39
+                - generic [ref=e123] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e124] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=39
+                - generic [ref=e125] [cursor=pointer]: 
+                - text: ลบ
+          - row "เมคคา  แก้ไข  ลบ" [ref=e126]:
+            - cell "เมคคา" [ref=e127]
+            - cell " แก้ไข  ลบ" [ref=e128]:
+              - link " แก้ไข" [ref=e129] [cursor=pointer]:
+                - /url: edit-branch.php?id=38
+                - generic [ref=e130] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e131] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=38
+                - generic [ref=e132] [cursor=pointer]: 
+                - text: ลบ
+          - row "เมคคา  แก้ไข  ลบ" [ref=e133]:
+            - cell "เมคคา" [ref=e134]
+            - cell " แก้ไข  ลบ" [ref=e135]:
+              - link " แก้ไข" [ref=e136] [cursor=pointer]:
+                - /url: edit-branch.php?id=37
+                - generic [ref=e137] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e138] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=37
+                - generic [ref=e139] [cursor=pointer]: 
+                - text: ลบ
+          - row "เมคคา  แก้ไข  ลบ" [ref=e140]:
+            - cell "เมคคา" [ref=e141]
+            - cell " แก้ไข  ลบ" [ref=e142]:
+              - link " แก้ไข" [ref=e143] [cursor=pointer]:
+                - /url: edit-branch.php?id=36
+                - generic [ref=e144] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e145] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=36
+                - generic [ref=e146] [cursor=pointer]: 
+                - text: ลบ
+          - row "เมคคา  แก้ไข  ลบ" [ref=e147]:
+            - cell "เมคคา" [ref=e148]
+            - cell " แก้ไข  ลบ" [ref=e149]:
+              - link " แก้ไข" [ref=e150] [cursor=pointer]:
+                - /url: edit-branch.php?id=35
+                - generic [ref=e151] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e152] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=35
+                - generic [ref=e153] [cursor=pointer]: 
+                - text: ลบ
+          - row "เมคคา  แก้ไข  ลบ" [ref=e154]:
+            - cell "เมคคา" [ref=e155]
+            - cell " แก้ไข  ลบ" [ref=e156]:
+              - link " แก้ไข" [ref=e157] [cursor=pointer]:
+                - /url: edit-branch.php?id=34
+                - generic [ref=e158] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e159] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=34
+                - generic [ref=e160] [cursor=pointer]: 
+                - text: ลบ
+          - row "เมคคา  แก้ไข  ลบ" [ref=e161]:
+            - cell "เมคคา" [ref=e162]
+            - cell " แก้ไข  ลบ" [ref=e163]:
+              - link " แก้ไข" [ref=e164] [cursor=pointer]:
+                - /url: edit-branch.php?id=33
+                - generic [ref=e165] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e166] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=33
+                - generic [ref=e167] [cursor=pointer]: 
+                - text: ลบ
+          - row "เมคคา  แก้ไข  ลบ" [ref=e168]:
+            - cell "เมคคา" [ref=e169]
+            - cell " แก้ไข  ลบ" [ref=e170]:
+              - link " แก้ไข" [ref=e171] [cursor=pointer]:
+                - /url: edit-branch.php?id=32
+                - generic [ref=e172] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e173] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=32
+                - generic [ref=e174] [cursor=pointer]: 
+                - text: ลบ
+          - row "เมคคา  แก้ไข  ลบ" [ref=e175]:
+            - cell "เมคคา" [ref=e176]
+            - cell " แก้ไข  ลบ" [ref=e177]:
+              - link " แก้ไข" [ref=e178] [cursor=pointer]:
+                - /url: edit-branch.php?id=31
+                - generic [ref=e179] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e180] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=31
+                - generic [ref=e181] [cursor=pointer]: 
+                - text: ลบ
+          - row "เมคคา  แก้ไข  ลบ" [ref=e182]:
+            - cell "เมคคา" [ref=e183]
+            - cell " แก้ไข  ลบ" [ref=e184]:
+              - link " แก้ไข" [ref=e185] [cursor=pointer]:
+                - /url: edit-branch.php?id=30
+                - generic [ref=e186] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e187] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=30
+                - generic [ref=e188] [cursor=pointer]: 
+                - text: ลบ
+          - row "เมคคา  แก้ไข  ลบ" [ref=e189]:
+            - cell "เมคคา" [ref=e190]
+            - cell " แก้ไข  ลบ" [ref=e191]:
+              - link " แก้ไข" [ref=e192] [cursor=pointer]:
+                - /url: edit-branch.php?id=29
+                - generic [ref=e193] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e194] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=29
+                - generic [ref=e195] [cursor=pointer]: 
+                - text: ลบ
+          - row "ประมง  แก้ไข  ลบ" [ref=e196]:
+            - cell "ประมง" [ref=e197]
+            - cell " แก้ไข  ลบ" [ref=e198]:
+              - link " แก้ไข" [ref=e199] [cursor=pointer]:
+                - /url: edit-branch.php?id=16
+                - generic [ref=e200] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e201] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=16
+                - generic [ref=e202] [cursor=pointer]: 
+                - text: ลบ
+          - row "วิทยาศาสตร์และคณิตศาสตร์  แก้ไข  ลบ" [ref=e203]:
+            - cell "วิทยาศาสตร์และคณิตศาสตร์" [ref=e204]
+            - cell " แก้ไข  ลบ" [ref=e205]:
+              - link " แก้ไข" [ref=e206] [cursor=pointer]:
+                - /url: edit-branch.php?id=11
+                - generic [ref=e207] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e208] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=11
+                - generic [ref=e209] [cursor=pointer]: 
+                - text: ลบ
+          - row "เทคโนโลยีคอมพิวเตอร์  แก้ไข  ลบ" [ref=e210]:
+            - cell "เทคโนโลยีคอมพิวเตอร์" [ref=e211]
+            - cell " แก้ไข  ลบ" [ref=e212]:
+              - link " แก้ไข" [ref=e213] [cursor=pointer]:
+                - /url: edit-branch.php?id=10
+                - generic [ref=e214] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e215] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=10
+                - generic [ref=e216] [cursor=pointer]: 
+                - text: ลบ
+          - row "เทคโนโลยีไฟฟ้า  แก้ไข  ลบ" [ref=e217]:
+            - cell "เทคโนโลยีไฟฟ้า" [ref=e218]
+            - cell " แก้ไข  ลบ" [ref=e219]:
+              - link " แก้ไข" [ref=e220] [cursor=pointer]:
+                - /url: edit-branch.php?id=9
+                - generic [ref=e221] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e222] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=9
+                - generic [ref=e223] [cursor=pointer]: 
+                - text: ลบ
+          - row "วิศวกรรมเครื่องกล  แก้ไข  ลบ" [ref=e224]:
+            - cell "วิศวกรรมเครื่องกล" [ref=e225]
+            - cell " แก้ไข  ลบ" [ref=e226]:
+              - link " แก้ไข" [ref=e227] [cursor=pointer]:
+                - /url: edit-branch.php?id=7
+                - generic [ref=e228] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e229] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=7
+                - generic [ref=e230] [cursor=pointer]: 
+                - text: ลบ
+          - row "อุตสาหกรรมเกษตร  แก้ไข  ลบ" [ref=e231]:
+            - cell "อุตสาหกรรมเกษตร" [ref=e232]
+            - cell " แก้ไข  ลบ" [ref=e233]:
+              - link " แก้ไข" [ref=e234] [cursor=pointer]:
+                - /url: edit-branch.php?id=6
+                - generic [ref=e235] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e236] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=6
+                - generic [ref=e237] [cursor=pointer]: 
+                - text: ลบ
+          - row "เครื่องจักรกลเกษตร  แก้ไข  ลบ" [ref=e238]:
+            - cell "เครื่องจักรกลเกษตร" [ref=e239]
+            - cell " แก้ไข  ลบ" [ref=e240]:
+              - link " แก้ไข" [ref=e241] [cursor=pointer]:
+                - /url: edit-branch.php?id=4
+                - generic [ref=e242] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e243] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=4
+                - generic [ref=e244] [cursor=pointer]: 
+                - text: ลบ
+          - row "สัตวศาสตร์  แก้ไข  ลบ" [ref=e245]:
+            - cell "สัตวศาสตร์" [ref=e246]
+            - cell " แก้ไข  ลบ" [ref=e247]:
+              - link " แก้ไข" [ref=e248] [cursor=pointer]:
+                - /url: edit-branch.php?id=2
+                - generic [ref=e249] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e250] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=2
+                - generic [ref=e251] [cursor=pointer]: 
+                - text: ลบ
+          - row "พืชศาสตร์ สิ่งทอและการออกแบบ  แก้ไข  ลบ" [ref=e252]:
+            - cell "พืชศาสตร์ สิ่งทอและการออกแบบ" [ref=e253]
+            - cell " แก้ไข  ลบ" [ref=e254]:
+              - link " แก้ไข" [ref=e255] [cursor=pointer]:
+                - /url: edit-branch.php?id=1
+                - generic [ref=e256] [cursor=pointer]: 
+                - text: แก้ไข
+              - link " ลบ" [ref=e257] [cursor=pointer]:
+                - /url: ../auth/delete-branch.php?id=1
+                - generic [ref=e258] [cursor=pointer]: 
+                - text: ลบ
+```
